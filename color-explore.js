@@ -196,7 +196,11 @@ var Module = {
   }
 };
 
-let gui = new dat.GUI({ autoPlace: true, width: 450 });                         // Instancia de dat.GUI para generar un panel de configuracion para el juego
+// datgui position https://stackoverflow.com/questions/40523458/dat-gui-size-and-position-of-menu-javascript-css
+// https://jsfiddle.net/prisoner849/mzbohe1L/
+let gui = new dat.GUI({ autoPlace: false});                         // Instancia de dat.GUI para generar un panel de configuracion para el juego
+gui.domElement.id = 'gui';
+gui_container.appendChild(gui.domElement);
 //let cfgFolder = gui.addFolder('Processing');                                                 // Carpeta de configuracion de propiedades del procesado de imágenes
 
 STATE['frame_controller'] = gui.add(cfg, 'frame', ['RGB','LAB','HSV']).name('Color Space');  // Configuración de la imagen mostrar como fondo del juego
