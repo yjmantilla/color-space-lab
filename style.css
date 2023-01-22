@@ -1,0 +1,12 @@
+.parent{
+
+    display:flex;
+    
+    gap: 5px;
+    
+    }
+
+img {
+    width: 60%;
+    height: auto;
+    }
